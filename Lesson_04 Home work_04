@@ -56,7 +56,7 @@ print(char_set)
 set_1 = {1, 2, 3, 4, 5}
 set_2 = {4, 6, 5, 10}
 
-diff_set = set_1 - set_2
+diff_set = set_1.symmetric_difference(set_2)
 sum_diff_set = sum(diff_set)
 print(sum_diff_set)
 
