@@ -1,0 +1,125 @@
+# task 1
+""" Задача - надрукувати табличку множення на задане число, але
+лише до максимального значення для добутку - 25.
+Код майже готовий, треба знайти помилки та випраавити\доповнити.
+"""
+def multiplication_table(number):
+    multiplier = 1
+
+    while number * multiplier <= 25:
+        result = number * multiplier
+        print(f"{number}x{multiplier}={result}")
+        multiplier += 1
+
+multiplication_table(3)
+# Should print:
+# 3x1=3
+# 3x2=6
+# 3x3=9
+# 3x4=12
+# 3x5=15
+
+
+# task 2
+"""  Написати функцію, яка обчислює суму двох чисел.
+"""
+def sum_numbers(a, b):
+    return a + b
+print(sum_numbers(3, 6))
+
+# task 3
+"""  Написати функцію, яка розрахує середнє арифметичне списку чисел.
+"""
+def average(lst):
+    return sum(lst) / len(lst)
+
+numbers = [1, 2, 3, 4, 5]
+print(average(numbers))
+
+
+# task 4
+"""  Написати функцію, яка приймає рядок та повертає його у зворотному порядку.
+"""
+def reverse_string(s):
+    return s[::-1]
+
+print(reverse_string("Hello, world!"))
+
+# task5
+"""  Написати функцію, яка приймає список слів та повертає найдовше слово у списку.
+"""
+def find_longest_word(word_list):
+    return max(word_list, key=len)
+str1 = ['apple', 'banana', 'cherry', 'Strawberries']
+
+longest_word = find_longest_word(str1)
+print(longest_word)
+
+# task 6
+"""  Написати функцію, яка приймає два рядки та повертає індекс першого входження другого рядка
+у перший рядок, якщо другий рядок є підрядком першого рядка, та -1, якщо другий рядок
+не є підрядком першого рядка."""
+def find_substring(str1, str2):
+    if str2 in str1:
+        return str1.index(str2)
+    else:
+        return -1
+
+str1 = "Hello, world!"
+str2 = "world"
+print(find_substring(str1, str2))
+
+str1 = "The quick brown fox jumps over the lazy dog"
+str2 = "cat"
+print(find_substring(str1, str2))
+
+# task 7 Home_work_01
+# task 04 == Зробіть так, щоб кількість бананів була
+# завжди в чотири рази більша, ніж яблук
+def summa_fruit(apples):
+    bananas = 4 * apples
+    return apples, bananas
+
+apples = 2
+apples, bananas = summa_fruit(2)
+print("Apples:", apples)
+print("Bananas:", bananas)
+
+# task 8 Home_work_01
+# task 07
+def count_trees():
+    apples = 4
+    pears = apples + 5
+    plum = apples - 2
+    total_trees = apples + pears + plum
+    return total_trees
+
+print(count_trees())
+# task 9 Home_work_02
+"""
+Площа Чорного моря становить 436 402 км2, а площа Азовського
+моря становить 37 800 км2. Яку площу займають Чорне та Азов-
+ське моря разом?"""
+def total_area_of_seas(black_sea, azov_sea):
+    return black_sea, azov_sea
+
+black_sea = 436402
+azov_sea = 37800
+total_area_of_seas = black_sea + azov_sea
+print('\n' +"Total area of seas =", total_area_of_seas, "km2") #(\n добавив щоб було зручніше девитися результат в консолі)
+
+# task 10
+"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
+перетворіть їх у 4 функції, що отримують значення та повертають результат.
+Обоязково документуйте функції та дайте зрозумілі імена змінним.
+"""
+# Придумав сам що в голову пришло)
+def cube_volume(a):
+    """
+    Обчислює об'єм куба за його стороною.
+
+    :param a: довжина сторони куба
+    :return: об'єм куба
+    """
+    volume = a ** 3
+    return volume
