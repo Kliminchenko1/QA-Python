@@ -69,6 +69,12 @@ str1 = "Hello, world!"
 str2 = "world"
 print(find_substring(str1, str2))
 
+# ось так?
+string = "hello world"
+substring = "world"
+index = string.find(substring)
+print(index)
+
 str1 = "The quick brown fox jumps over the lazy dog"
 str2 = "cat"
 print(find_substring(str1, str2))
@@ -77,7 +83,9 @@ print(find_substring(str1, str2))
 # task 04 == Зробіть так, щоб кількість бананів була
 # завжди в чотири рази більша, ніж яблук
 def summa_fruit(apples):
+    # Calculate the number of bananas based on the number of apples
     bananas = 4 * apples
+    # Return the number of apples and bananas
     return apples, bananas
 
 apples = 2
@@ -87,26 +95,33 @@ print("Bananas:", bananas)
 
 # task 8 Home_work_01
 # task 07
+#The  count_trees function counts the total number of trees on the plot,
+# knowing the number of apple trees, pear trees, and plum trees.
 def count_trees():
-    apples = 4
-    pears = apples + 5
-    plum = apples - 2
-    total_trees = apples + pears + plum
+    apples = 4             # number of apple trees
+    pears = apples + 5     # number of pear trees
+    plum = apples - 2      # number of plum trees
+    total_trees = apples + pears + plum  # total number of trees
     return total_trees
 
-print(count_trees())
+print(count_trees()) # call the function and print the result
 # task 9 Home_work_02
 """
 Площа Чорного моря становить 436 402 км2, а площа Азовського
 моря становить 37 800 км2. Яку площу займають Чорне та Азов-
 ське моря разом?"""
-def total_area_of_seas(black_sea, azov_sea):
-    return black_sea, azov_sea
+def greet(name):
+    """
+    The function of greeting with the entered name.
 
-black_sea = 436402
-azov_sea = 37800
-total_area_of_seas = black_sea + azov_sea
-print('\n' +"Total area of seas =", total_area_of_seas, "km2") #(\n добавив щоб було зручніше девитися результат в консолі)
+    Parameters:
+    name (str): The name of the person to be greeted.
+
+    Returns:
+    str: The string with the greeting.
+    """
+    return f"Hello, {name}! How are you?"
+print(greet("John"))
 
 # task 10
 """  Оберіть будь-які 4 таски з попередніх домашніх робіт та
