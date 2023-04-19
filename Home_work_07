@@ -5,7 +5,7 @@ import pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 
 
-class TestFindLongestWord(unittest.TestCase):
+class Unet_test_001(unittest.TestCase):
 
     def test_empty_list(self):
         word_list = []
@@ -44,38 +44,38 @@ class TestFindLongestWord(unittest.TestCase):
 
     def test_sum_nambers(self):
         actual_result = sum_numbers(10, 30)
-        except_result = 40
-        self.assertEqual(actual_result, except_result)
+        expect_result = 40
+        self.assertEqual(actual_result, expect_result)
 
     def test_sum_nambers(self):
         actual_result = sum_numbers("10000", "30")
-        except_result = "1000030"
-        self.assertEqual(actual_result, except_result)
+        expect_result = "1000030"
+        self.assertEqual(actual_result, expect_result)
 
     def test_sum_nambers(self):
         actual_result = sum_numbers("-10", "1")
-        except_result = "-101"
-        self.assertEqual(actual_result, except_result)
+        expect_result = "-101"
+        self.assertEqual(actual_result, expect_result)
 
     def test_equal_length_words(self):
         actual_result = summa_fruit(5)
-        except_result = (5, 20)
-        self.assertEqual(actual_result, except_result)
+        expect_result = (5, 20)
+        self.assertEqual(actual_result, expect_result)
 
     def test_equal_length_words(self):
         actual_result = summa_fruit(0)
-        except_result = (0, 0)
-        self.assertEqual(actual_result, except_result)
+        expect_result = (0, 0)
+        self.assertEqual(actual_result, expect_result)
 
     def test_equal_length_words(self):
         actual_result = summa_fruit("0")
-        except_result = ('0', '0000')
-        self.assertEqual(actual_result, except_result)
+        expect_result = ('0', '0000')
+        self.assertEqual(actual_result, expect_result)
 
     def test_equal_length_words(self):
         actual_result = summa_fruit(-5)
-        except_result = (-5, -20)
-        self.assertEqual(actual_result, except_result)
+        expect_result = (-5, -20)
+        self.assertEqual(actual_result, expect_result)
 
 
 if __name__ == '__main__':
