@@ -1,0 +1,82 @@
+from Home_work_06 import *
+import unittest
+import sys
+import pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+
+
+class TestFindLongestWord(unittest.TestCase):
+
+    def test_empty_list(self):
+        word_list = []
+        self.assertRaises(ValueError, find_longest_word, word_list)
+
+    def test_single_word(self):
+        word_list = ['apple']
+        self.assertEqual(find_longest_word(word_list), 'apple')
+
+    def test_multiple_words(self):
+        word_list = ['apple', 'banana', 'cherry', 'strawberries']
+        self.assertEqual(find_longest_word(word_list), 'strawberries')
+
+    def test_equal_length_words(self):
+        word_list = ['apple', 'pear', 'peach']
+        self.assertEqual(find_longest_word(word_list), 'apple')
+
+    def test_sum_integers(self):
+        self.assertEqual(sum_numbers(3, 6), 9)
+
+    def test_sum_floats(self):
+        self.assertAlmostEqual(sum_numbers(3.3, 4.7), 8.0, places=1)
+
+    def test_sum_negative_numbers(self):
+        self.assertEqual(sum_numbers(-2, 5), 3)
+
+    def test_sum_nambers(self):
+        actual_result = sum_numbers(3, 6)
+        except_result = 9
+        self.assertEqual(actual_result, except_result)
+
+    def test_sum_nambers(self):
+        actual_result = sum_numbers(0, 0)
+        except_result = 0
+        self.assertEqual(actual_result, except_result)
+
+    def test_sum_nambers(self):
+        actual_result = sum_numbers(10, 30)
+        except_result = 40
+        self.assertEqual(actual_result, except_result)
+
+    def test_sum_nambers(self):
+        actual_result = sum_numbers("10000", "30")
+        except_result = "1000030"
+        self.assertEqual(actual_result, except_result)
+
+    def test_sum_nambers(self):
+        actual_result = sum_numbers("-10", "1")
+        except_result = "-101"
+        self.assertEqual(actual_result, except_result)
+
+    def test_equal_length_words(self):
+        actual_result = summa_fruit(5)
+        except_result = (5, 20)
+        self.assertEqual(actual_result, except_result)
+
+    def test_equal_length_words(self):
+        actual_result = summa_fruit(0)
+        except_result = (0, 0)
+        self.assertEqual(actual_result, except_result)
+
+    def test_equal_length_words(self):
+        actual_result = summa_fruit("0")
+        except_result = ('0', '0000')
+        self.assertEqual(actual_result, except_result)
+
+    def test_equal_length_words(self):
+        actual_result = summa_fruit(-5)
+        except_result = (-5, -20)
+        self.assertEqual(actual_result, except_result)
+
+
+if __name__ == '__main__':
+    unittest.main()
