@@ -5,7 +5,7 @@ import pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 
 
-class Unet_test_001(unittest.TestCase):
+class Unit_test_001(unittest.TestCase):
 
     def test_empty_list(self):
         word_list = []
